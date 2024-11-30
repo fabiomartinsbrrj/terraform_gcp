@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "google" {
-  project     = "terraform-lab-378618"
+  project     = "terraform-lab-442618"
   region      = "us-central1"
-  credentials = "/Users/anderson/Documents/credenciais-gcp/terraform-lab-378618-e771177c51d7.json"
+  credentials = "C:\\Users\\fabio\\workspace\\terraform-lab-442618-17fcd189cf4e.json"
 }
