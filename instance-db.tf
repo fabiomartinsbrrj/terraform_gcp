@@ -1,4 +1,4 @@
-/*resource "google_compute_instance" "db" {
+resource "google_compute_instance" "db" {
   name         = "db"
   machine_type = "e2-small"
   zone         = "us-central1-a"
@@ -10,10 +10,10 @@
   }
 
   attached_disk {
-    source = "db-disk"
+    source = google_compute_disk.db-disk.self_link
   }
 
   network_interface {
-    subnetwork = "subnet1"
+    subnetwork = google_compute_subnetwork.subnet1.self_link
   }
-}*/
+}
