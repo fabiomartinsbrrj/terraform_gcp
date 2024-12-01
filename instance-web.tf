@@ -20,4 +20,9 @@ resource "google_compute_instance" "web" {
   }
 
   metadata_startup_script = "apt update; apt install -y nginx"
+
+  depends_on = [
+    google_compute_instance.db,
+    google_compute_firewall.allow-default
+  ]
 }
